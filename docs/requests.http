@@ -1,0 +1,74 @@
+### IntelliJ HTTP Client / VS Code REST Client. The session lives in an HttpOnly cookie, so keep cookies enabled.
+### The X-Requested-With header is required on state-changing requests that use the cookie.
+
+@api = http://localhost:8080
+@ai = http://localhost:5000
+
+### AI service ------------------------------------------------------------
+GET {{ai}}/health
+
+###
+GET {{ai}}/symptoms
+
+###
+POST {{ai}}/predict
+Content-Type: application/json
+
+{ "symptoms": ["itching", "skin_rash", "nodal_skin_eruptions"] }
+
+### Backend ---------------------------------------------------------------
+POST {{api}}/api/auth/register
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{ "fullName": "Asha Rao", "email": "asha@example.com", "password": "Passw0rd123" }
+
+###
+POST {{api}}/api/auth/login
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{ "email": "asha@example.com", "password": "Passw0rd123" }
+
+###
+GET {{api}}/api/auth/me
+
+###
+POST {{api}}/api/predictions
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{ "symptoms": ["itching", "skin_rash", "nodal_skin_eruptions"] }
+
+###
+GET {{api}}/api/predictions/my?page=0&size=10&q=fungal
+
+###
+GET {{api}}/api/doctors
+
+###
+GET {{api}}/api/doctors/1/slots?date=2026-11-10
+
+###
+POST {{api}}/api/appointments
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{ "doctorId": 1, "date": "2026-11-10", "time": "09:00" }
+
+###
+PATCH {{api}}/api/appointments/1/cancel
+X-Requested-With: XMLHttpRequest
+
+### Admin (log in as the admin first) ---------------------------------------
+GET {{api}}/api/admin/dashboard
+
+###
+GET {{api}}/api/admin/analytics
+
+###
+PATCH {{api}}/api/admin/appointments/1/status
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+{ "status": "CONFIRMED" }

@@ -1,0 +1,126 @@
+{
+  "method": "occlusion sensitivity: mean drop in the true-class model score when the symptom is switched off, over training records where it is present",
+  "caveat": "Describes what THIS MODEL relies on in THIS dataset. It is not medical causality.",
+  "top_symptoms": [
+    {
+      "symptom": "pus_filled_pimples",
+      "mean_score_drop": 0.3775
+    },
+    {
+      "symptom": "weakness_of_one_body_side",
+      "mean_score_drop": 0.3411
+    },
+    {
+      "symptom": "altered_sensorium",
+      "mean_score_drop": 0.3411
+    },
+    {
+      "symptom": "extra_marital_contacts",
+      "mean_score_drop": 0.3364
+    },
+    {
+      "symptom": "bladder_discomfort",
+      "mean_score_drop": 0.308
+    },
+    {
+      "symptom": "sunken_eyes",
+      "mean_score_drop": 0.3073
+    },
+    {
+      "symptom": "dehydration",
+      "mean_score_drop": 0.3073
+    },
+    {
+      "symptom": "nodal_skin_eruptions",
+      "mean_score_drop": 0.2745
+    },
+    {
+      "symptom": "dischromic_patches",
+      "mean_score_drop": 0.2745
+    },
+    {
+      "symptom": "spotting_urination",
+      "mean_score_drop": 0.2374
+    },
+    {
+      "symptom": "shivering",
+      "mean_score_drop": 0.2248
+    },
+    {
+      "symptom": "watering_from_eyes",
+      "mean_score_drop": 0.2248
+    },
+    {
+      "symptom": "coma",
+      "mean_score_drop": 0.211
+    },
+    {
+      "symptom": "stomach_bleeding",
+      "mean_score_drop": 0.211
+    },
+    {
+      "symptom": "movement_stiffness",
+      "mean_score_drop": 0.2097
+    },
+    {
+      "symptom": "lack_of_concentration",
+      "mean_score_drop": 0.1873
+    },
+    {
+      "symptom": "blister",
+      "mean_score_drop": 0.1812
+    },
+    {
+      "symptom": "red_sore_around_nose",
+      "mean_score_drop": 0.1812
+    },
+    {
+      "symptom": "yellow_crust_ooze",
+      "mean_score_drop": 0.1812
+    },
+    {
+      "symptom": "burning_micturition",
+      "mean_score_drop": 0.1764
+    },
+    {
+      "symptom": "blackheads",
+      "mean_score_drop": 0.1648
+    },
+    {
+      "symptom": "scurring",
+      "mean_score_drop": 0.1648
+    },
+    {
+      "symptom": "stomach_pain",
+      "mean_score_drop": 0.1625
+    },
+    {
+      "symptom": "bloody_stool",
+      "mean_score_drop": 0.1582
+    },
+    {
+      "symptom": "spinning_movements",
+      "mean_score_drop": 0.157
+    },
+    {
+      "symptom": "unsteadiness",
+      "mean_score_drop": 0.157
+    },
+    {
+      "symptom": "muscle_wasting",
+      "mean_score_drop": 0.1549
+    },
+    {
+      "symptom": "patches_in_throat",
+      "mean_score_drop": 0.1549
+    },
+    {
+      "symptom": "weakness_in_limbs",
+      "mean_score_drop": 0.1492
+    },
+    {
+      "symptom": "foul_smell_of_urine",
+      "mean_score_drop": 0.1488
+    }
+  ]
+}

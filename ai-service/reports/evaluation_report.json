@@ -1,0 +1,169 @@
+{
+  "data_quality": {
+    "raw_rows": 4920,
+    "raw_columns": 133,
+    "missing_values": 0,
+    "duplicate_columns_dropped": [
+      "fluid_overload"
+    ],
+    "constant_zero_columns_dropped": [],
+    "renamed_columns": {
+      "spotting_ urination": "spotting_urination",
+      "foul_smell_of urine": "foul_smell_of_urine",
+      "toxic_look_(typhos)": "toxic_look_typhos",
+      "dischromic _patches": "dischromic_patches"
+    },
+    "exact_duplicate_rows": 4616,
+    "unique_rows": 304,
+    "conflicting_rows": 0,
+    "n_symptoms": 131,
+    "n_classes": 41,
+    "class_count_min": 120,
+    "class_count_max": 120,
+    "class_count_min_after_dedup": 5,
+    "class_count_max_after_dedup": 10
+  },
+  "leakage_demonstration": {
+    "naive_split_test_rows_also_in_train": 1.0,
+    "naive_split_accuracy_(INFLATED)": 1.0,
+    "note": "A raw-row split leaks duplicates into the test set; we de-duplicate first."
+  },
+  "split_sizes": {
+    "train": 182,
+    "validation": 61,
+    "test": 61
+  },
+  "class_counts_after_dedup": {
+    "Migraine": 10,
+    "Chicken pox": 10,
+    "Dengue": 10,
+    "Hepatitis D": 10,
+    "Diabetes": 9,
+    "Jaundice": 9,
+    "Typhoid": 9,
+    "hepatitis A": 9,
+    "Hepatitis B": 9,
+    "Hepatitis E": 9,
+    "Tuberculosis": 9,
+    "Common Cold": 9,
+    "Pneumonia": 9,
+    "Hyperthyroidism": 9,
+    "Hypoglycemia": 9,
+    "Chronic cholestasis": 8,
+    "Malaria": 8,
+    "Alcoholic hepatitis": 8,
+    "Varicose veins": 8,
+    "Hypothyroidism": 8,
+    "GERD": 7,
+    "Peptic ulcer diseae": 7,
+    "Bronchial Asthma": 7,
+    "Hepatitis C": 7,
+    "Osteoarthristis": 7,
+    "(vertigo) Paroymsal  Positional Vertigo": 7,
+    "Psoriasis": 7,
+    "Drug Reaction": 6,
+    "Hypertension": 6,
+    "Cervical spondylosis": 6,
+    "Dimorphic hemorrhoids(piles)": 6,
+    "Arthritis": 6,
+    "Impetigo": 6,
+    "Fungal infection": 5,
+    "Allergy": 5,
+    "AIDS": 5,
+    "Gastroenteritis": 5,
+    "Paralysis (brain hemorrhage)": 5,
+    "Heart attack": 5,
+    "Acne": 5,
+    "Urinary tract infection": 5
+  },
+  "model_comparison": [
+    {
+      "model": "logistic_regression",
+      "cv_f1_macro_mean": 1.0,
+      "cv_f1_macro_std": 0.0,
+      "cv_accuracy_mean": 1.0,
+      "val_accuracy": 1.0,
+      "val_precision_macro": 1.0,
+      "val_recall_macro": 1.0,
+      "val_f1_macro": 1.0,
+      "val_f1_weighted": 1.0
+    },
+    {
+      "model": "decision_tree",
+      "cv_f1_macro_mean": 0.6260723693650522,
+      "cv_f1_macro_std": 0.04048701312755241,
+      "cv_accuracy_mean": 0.6956284153005464,
+      "val_accuracy": 0.639344262295082,
+      "val_precision_macro": 0.5345528455284553,
+      "val_recall_macro": 0.5487804878048781,
+      "val_f1_macro": 0.5240775484677923,
+      "val_f1_weighted": 0.6282051282051282
+    },
+    {
+      "model": "random_forest",
+      "cv_f1_macro_mean": 1.0,
+      "cv_f1_macro_std": 0.0,
+      "cv_accuracy_mean": 1.0,
+      "val_accuracy": 1.0,
+      "val_precision_macro": 1.0,
+      "val_recall_macro": 1.0,
+      "val_f1_macro": 1.0,
+      "val_f1_weighted": 1.0
+    },
+    {
+      "model": "svm_linear",
+      "cv_f1_macro_mean": 1.0,
+      "cv_f1_macro_std": 0.0,
+      "cv_accuracy_mean": 1.0,
+      "val_accuracy": 1.0,
+      "val_precision_macro": 1.0,
+      "val_recall_macro": 1.0,
+      "val_f1_macro": 1.0,
+      "val_f1_weighted": 1.0
+    },
+    {
+      "model": "keras_mlp",
+      "cv_f1_macro_mean": 0.9989159891598917,
+      "cv_f1_macro_std": 0.00359525722531749,
+      "cv_accuracy_mean": 0.9986338797814208,
+      "val_accuracy": 1.0,
+      "val_precision_macro": 1.0,
+      "val_recall_macro": 1.0,
+      "val_f1_macro": 1.0,
+      "val_f1_weighted": 1.0
+    }
+  ],
+  "selected_model": "logistic_regression",
+  "selection_rule": "highest mean CV macro-F1 on train+val (4-fold x 3 repeats); models within 0.01 of the best are tied and the simplest wins",
+  "test_metrics_selected_model": {
+    "accuracy": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "f1_weighted": 1.0,
+    "top3_accuracy": 1.0,
+    "accuracy_95ci_wilson": [
+      0.9407540837980555,
+      1.0
+    ],
+    "n_test_records": 61,
+    "robustness_to_missing_symptoms": {
+      "drop_0pct": {
+        "top1_accuracy": 1.0,
+        "top3_accuracy": 1.0,
+        "n_samples": 61
+      },
+      "drop_25pct": {
+        "top1_accuracy": 0.9901639344262295,
+        "top3_accuracy": 1.0,
+        "n_samples": 1220
+      },
+      "drop_50pct": {
+        "top1_accuracy": 0.9180327868852459,
+        "top3_accuracy": 0.9975409836065574,
+        "n_samples": 1220
+      }
+    }
+  },
+  "confusion_matrix_png": true
+}

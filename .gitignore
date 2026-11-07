@@ -1,0 +1,19 @@
+# secrets / local config
+.env
+*.env.local
+application-local.yml
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+# java
+backend/target/
+.idea/
+*.iml
+# node
+frontend/node_modules/
+frontend/dist/
+# os
+.DS_Store

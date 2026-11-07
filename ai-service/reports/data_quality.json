@@ -1,0 +1,24 @@
+{
+  "raw_rows": 4920,
+  "raw_columns": 133,
+  "missing_values": 0,
+  "duplicate_columns_dropped": [
+    "fluid_overload"
+  ],
+  "constant_zero_columns_dropped": [],
+  "renamed_columns": {
+    "spotting_ urination": "spotting_urination",
+    "foul_smell_of urine": "foul_smell_of_urine",
+    "toxic_look_(typhos)": "toxic_look_typhos",
+    "dischromic _patches": "dischromic_patches"
+  },
+  "exact_duplicate_rows": 4616,
+  "unique_rows": 304,
+  "conflicting_rows": 0,
+  "n_symptoms": 131,
+  "n_classes": 41,
+  "class_count_min": 120,
+  "class_count_max": 120,
+  "class_count_min_after_dedup": 5,
+  "class_count_max_after_dedup": 10
+}
